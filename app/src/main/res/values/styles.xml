@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FF8F00</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#f0ff7100</item>
+        <item name="colorControlNormal">#d32f2f</item>
+        <item name="colorControlActivated">#ff5722</item>
+        <item name="colorControlHighlight">#f44336</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeBlue" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#049ae5</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#0487d1</item>
+        <item name="colorControlNormal">#049ae5</item>
+        <item name="colorControlActivated">#0487d1</item>
+        <item name="colorControlHighlight">#0487d1</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#0487d1</item>
+    </style>
+
+    <style name="AppThemeYellow" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ffff00</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#55ffff00</item>
+        <item name="colorControlNormal">#d32f2f</item>
+        <item name="colorControlActivated">#ff5722</item>
+        <item name="colorControlHighlight">#f44336</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeRed" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#c62828</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#b71c1c</item>
+        <item name="colorControlNormal">#d32f2f</item>
+        <item name="colorControlActivated">#c62828</item>
+        <item name="colorControlHighlight">#f44336</item>
+        <item name="colorPrimaryDark">#d32f2f</item>
+        <item name="colorAccent">#0487d1</item>
+    </style>
+
+</resources>

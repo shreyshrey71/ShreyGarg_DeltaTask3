@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name : "
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:id="@+id/forcename"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID : "
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:id="@+id/forceid"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Link : "
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:id="@+id/forcelink"
+        android:linksClickable="true"
+        android:padding="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#212121"
+        android:layout_marginBottom="50dp"
+        android:scrollbarThumbVertical="@android:color/holo_blue_dark"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/forcedescription"
+            android:text="Description :-\n\nOops :\\ no Data Found!!!"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:padding="10dp" />
+    </ScrollView>
+
+</LinearLayout>

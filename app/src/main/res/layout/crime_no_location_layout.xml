@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Select Date"
+        android:background="#272727"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:id="@+id/datesel"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/enter"
+        android:background="#b71c1c"
+        android:layout_alignParentBottom="true"
+        android:text="Select Forces"
+        android:onClick="showForces"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" />
+</RelativeLayout>
