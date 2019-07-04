@@ -20,7 +20,8 @@
         <activity android:name=".LocationResultActivity"
             android:parentActivityName=".LocationActivity"/>
         <activity android:name=".MapMarker"/>
-        <activity android:name=".CrimeDetails"/>
+        <activity android:name=".CrimeDetails"
+            android:screenOrientation="portrait"/>
         <activity android:name=".NoLocationActivity"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".NoLocationResultActivity"
@@ -33,7 +34,8 @@
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".FavoriteActivity"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

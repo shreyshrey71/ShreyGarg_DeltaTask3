@@ -88,9 +88,10 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.Locati
         {
             locationViewHolder.favicon.setBackgroundColor(Color.parseColor("#00b0e0"));
         }
-        locationViewHolder.parent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        final LocationViewHolder locationViewHolder1 = locationViewHolder;
+        locationViewHolder.parent.setOnTouchListener(new OnSwipeTouchListener(context) {
+            Database mydb = new Database(context);
+            public void onClick() {
                 Intent intent = new Intent(context, CrimeDetails.class);
                 intent.putExtra("latitude", latitude.get(pos));
                 intent.putExtra("longitude", longitude.get(pos));
@@ -103,8 +104,17 @@ public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.Locati
                 intent.putExtra("mode", mode.get(pos));
                 context.startActivity(intent);
             }
+            public void onSwipeRight() {
+                locationViewHolder1.favicon.setBackgroundColor(Color.parseColor("#00b0e0"));
+                long l = mydb.insertData(id.get(pos),category.get(pos),date.get(pos),latitude.get(pos),
+                        longitude.get(pos),street.get(pos),ltype.get(pos),pid.get(pos),mode.get(pos));
+            }
+            public void onSwipeLeft() {
+                locationViewHolder1.favicon.setBackgroundColor(Color.parseColor("#aaaaaa"));
+                long l = mydb.Deleterow(id.get(pos));
+            }
+
         });
-        final LocationViewHolder locationViewHolder1 = locationViewHolder;
         locationViewHolder.favicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
