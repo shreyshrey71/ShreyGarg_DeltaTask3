@@ -1,15 +1,22 @@
 package com.example.android.shreygarg_deltatask3;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Scene;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.OvershootInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -22,6 +29,7 @@ public class MapMarker extends AppCompatActivity {
     float x,y;
     RelativeLayout parent;
     ImageView imageView;
+    float dY;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +74,7 @@ public class MapMarker extends AppCompatActivity {
             super(context);
             paint=new Paint();
             paint.setColor(Color.parseColor("#00b0e0"));
-            paint.setStrokeWidth(20);
+            paint.setStrokeWidth(10);
         }
         @Override
         public void onDraw(Canvas canvas)
@@ -86,5 +94,11 @@ public class MapMarker extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public void openmaps(View view)
+    {
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+            Uri.parse("geo:"+lat+","+lng+"?z=1&q="+lat+","+lng+"(Crime Scene)"));
+        startActivity(intent);
     }
 }

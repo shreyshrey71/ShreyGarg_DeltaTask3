@@ -5,11 +5,32 @@
     android:layout_height="match_parent"
     android:id="@+id/mapparent"
     android:background="#121212">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ukmap"
-        android:id="@+id/map"
-        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ukmap"
+            android:layout_gravity="center"
+            android:id="@+id/map"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View In Maps"
+            android:background="#b71c1c"
+            android:onClick="openmaps"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
